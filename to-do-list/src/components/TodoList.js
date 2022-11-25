@@ -1,5 +1,6 @@
 import React from "react";
 import Header from './Header'
+import TodoItem from "./TodoItem";
 
 function TodoList(props) {
   const { title, items } = props;
@@ -10,22 +11,7 @@ function TodoList(props) {
 <Header title = {title}/>
       <ul className="list-group list-group-flush">
         {items.map((item) => (
-          <li key={item.id} className="list-group-item">
-            <div className="checkbox">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                value=""
-                id={"todo-item-check-${item.id}"}
-              />
-              <label
-                className="form-check-label"
-                htmlFor={"todo-item-check-${item.id}"}
-              >
-                {item.text}
-              </label>
-            </div>
-          </li>
+          <TodoItem item = {item}/>
         ))}
       </ul>
     </div>
