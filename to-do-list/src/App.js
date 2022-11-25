@@ -5,7 +5,7 @@ import React from "react";
 import TodoList from "./TodoList/TodoList";
 
 function App() {
-  let items = [
+  const items = [
     {
       id: 1,
       text: "Learn JS",
