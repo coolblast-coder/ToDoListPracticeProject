@@ -9,11 +9,11 @@ export default function TodoItem(props) {
           className="form-check-input"
           type="checkbox"
           value=""
-          id={"todo-item-check-${item.id}"}
+          id={`todo-item-check-${item.id}`}
         />
         <label
           className="form-check-label"
-          htmlFor={"todo-item-check-${item.id}"}
+          htmlFor={`todo-item-check-${item.id}`}
         >
           {item.text}
         </label>

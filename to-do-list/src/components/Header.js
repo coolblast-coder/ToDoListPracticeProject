@@ -1,5 +1,6 @@
 import React from "react";
 import InputBox from "./InputBox";
+
 function Header(props) {
   const { title } = props;
   return (

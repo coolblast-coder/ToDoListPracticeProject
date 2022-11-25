@@ -1,7 +1,11 @@
 import React from "react";
 
 function InputBox() {
-  <input type="text" placeholder="Add New" className="form-control add-todo" />;
+    return(
+    <div className="InputBox">
+  <input type="text" className="form-control add-todo" placeholder="Add New" />
+  </div>
+  )
 }
 
 export default InputBox;
