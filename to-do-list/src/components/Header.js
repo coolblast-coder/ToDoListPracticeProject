@@ -1,9 +1,13 @@
 import React from "react";
-
-export default function Header(props){
-    const {title}=props;
-return(
-    <h1>{title.toUpperCase()}</h1>
-)
-
+import InputBox from "./InputBox";
+function Header(props) {
+  const { title } = props;
+  return (
+    <header>
+      <h1>{title.toUpperCase()}</h1>
+      <InputBox />
+    </header>
+  );
 }
+
+export default Header;

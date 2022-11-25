@@ -8,14 +8,13 @@ function TodoList(props) {
   const count = items.length;
   return (
     <div className="todolist">
-      {/* <h1>{title.toUpperCase()}</h1> */}
       <Header title={title} />
       <ul className="list-group list-group-flush">
         {items.map((item) => (
           <TodoItem item={item} />
         ))}
       </ul>
-      <Footer count={count}/>
+      <Footer count={count} />
     </div>
   );
 }

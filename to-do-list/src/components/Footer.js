@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Footer(props){
+function Footer(props){
     const {count} = props
     return(
         
@@ -10,3 +10,5 @@ export default function Footer(props){
         </div>
     )
 }
+
+export default Footer
