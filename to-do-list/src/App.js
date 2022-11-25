@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
+import TodoList from "./TodoList/TodoList";
 
 function App() {
   let items = [
@@ -24,45 +25,9 @@ function App() {
   let title = "Things to do";
 
   return (
-    <div className="App">
-      <div className="container">
-        <div className="row">
-          <div className="todolist">
-            <h1>{title.toUpperCase()}</h1>
-            {/* <ul className="list-unstyled">
-              {items.map((item) => {
-                <li key={item.id} className="ui-state-default">
-                  <div className="checkbox">
-                    <label>
-                      <input type="checkbox" value="" id="" />
-                      {item.text}
-                    </label>
-                  </div>
-                </li>;
-              })}
-            </ul> */}
-            <ul className="list-group list-group-flush">
-              {items.map((item) => (
-                <li key={item.id} className="list-group-item">
-                  <div className="checkbox">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id={"todo-item-check-${item.id}"}
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor={"todo-item-check-${item.id}"}
-                    >
-                      {item.text}
-                    </label>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+    <div className="container">
+      <div className="row">
+        <TodoList title={title} items={items} />
       </div>
     </div>
   );
