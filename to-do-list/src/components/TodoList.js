@@ -1,6 +1,7 @@
 import React from "react";
 import Header from './Header'
 import TodoItem from "./TodoItem";
+import Footer from "./Footer";
 
 function TodoList(props) {
   const { title, items } = props;
@@ -14,6 +15,7 @@ function TodoList(props) {
           <TodoItem item = {item}/>
         ))}
       </ul>
+      <Footer/>
     </div>
   );
 }
