@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
-import TodoList from "./TodoList/TodoList";
+import TodoList from "./components/TodoList";
 
 function App() {
   const items = [
