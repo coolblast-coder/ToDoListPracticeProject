@@ -3,24 +3,11 @@ import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import React, { useState, useCallback } from "react";
 import TodoList from "./components/TodoList";
+//import {FILTER_ACTIVE} from "./services/filter"
+import {getAll, createNew} from './services/todo'
 
-const ItemsInitialState = [
-  {
-    id: 1,
-    text: "Learn JS",
-    completed: false,
-  },
-  {
-    id: 2,
-    text: "Learn React",
-    completed: false,
-  },
-  {
-    id: 3,
-    text: "Build a React App",
-    completed: false,
-  },
-];
+
+const ItemsInitialState = getAll()
 
 const FilterInitialState = "active";
 
