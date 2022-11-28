@@ -22,9 +22,12 @@ const ItemsInitialState = [
   },
 ];
 
+const FilterInitialState = "active";
+
 function App() {
   const title = "Things to do";
   const [items, updateItems] = useState(ItemsInitialState);
+  const [filter, setFilter] = useState(FilterInitialState);
   const addNewItem = useCallback(
     (text) => {
       updateItems((items) => {
@@ -39,10 +42,18 @@ function App() {
     [updateItems]
   );
 
+  const changeFilter = useCallback((value) => setFilter(value), [setFilter]);
+
   return (
     <div className="container">
       <div className="row">
-        <TodoList title={title} items={items} addNewItem={addNewItem} />
+        <TodoList
+          title={title}
+          items={items}
+          filter={filter}
+          addNewItem={addNewItem}
+          changeFilter={changeFilter}
+        />
       </div>
     </div>
   );
