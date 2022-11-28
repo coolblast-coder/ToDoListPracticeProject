@@ -4,14 +4,14 @@ import TodoItem from "./TodoItem";
 import Footer from "./Footer";
 
 function TodoList(props) {
-  const { title, items } = props;
+  const { title, items, addNewItem } = props;
   const count = items.length;
   return (
     <div className="todolist">
-      <Header title={title} />
+      <Header title={title} addNewItem={addNewItem}/>
       <ul className="list-group list-group-flush">
         {items.map((item) => (
-          <TodoItem item={item} />
+          <TodoItem key={item.id} item={item} />
         ))}
       </ul>
       <Footer count={count} />
@@ -20,3 +20,4 @@ function TodoList(props) {
 }
 
 export default TodoList;
+ 
